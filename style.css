@@ -6,7 +6,7 @@
   list-style: none;
   --speed: 0.2s;
   --button-text: white;
-  --highlight-color: rgb(156, 0, 156);
+  --highlight-color: rgb(98, 0, 255);
 }
 body {
   /* overflow-x: hidden; */
@@ -131,7 +131,7 @@ nav .title {
   width: 100%;
   height: 100%;
   position: relative;
-  overflow: auto;
+  overflow: hidden;
   z-index: -10;
 }
 
@@ -171,8 +171,7 @@ nav .title {
 .info {
   display: flex;
   place-items: center;
-  margin: 0 5%;
-  margin-top: 30%;
+  margin: 30% 0 0 5%;
   background-color: white;
 }
 .info i {
@@ -180,11 +179,48 @@ nav .title {
 }
 .info .info-box {
   width: 27%;
-  margin: 1.5rem;
+  margin: 1.5rem 5% 0 0;
 }
 
-@media only screen and (max-width: 850px) {
+.testimonial {
+  margin: 5% 5%;
+}
+.testimonial .header {
 
+}
+.testimonial .header span {
+  font-size: 0.9rem;
+  letter-spacing: 3px;
+  color: rgb(65, 65, 65);
+  position: relative;
+}
+.testimonial .header span::before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: -5;
+  left: 0;
+  width: 27%;
+  border-top: 5px solid var(--highlight-color);
+  border-radius: 100vh;
+}
+.testimonial .content {
+
+}
+.testimonial .image {
+  width: 10rem;
+  height: 10rem;
+}
+.testimonial .image img {
+  width: 10rem;
+  height: 10rem;
+}
+
+@media only screen and (max-width: 1100px) {
+  .banner {
+    margin-top: 7rem;
+    max-width: 100%;
+  }
 }
 @media only screen and (max-width: 770px) {
   .navbar-right {
@@ -211,10 +247,14 @@ nav .title {
     }
   }
 
-  .banner {
-    margin-top: 7rem;
-    max-width: 100%;
+  nav .title {
+    margin-left: 0;
   }
+  nav .menu-button {
+    margin-right: 0;
+    margin-left: 2rem;
+  }
+  
   .banner div {
     margin: 0;
     max-width: 100%;
@@ -224,7 +264,8 @@ nav .title {
     flex-direction: column;
   }
   .info .info-box {
-    width: 90%;
+    width: 100%;
+    margin-right: 0;
   }
 
 } 
