@@ -223,14 +223,15 @@ nav .title {
 .testimonial .quote .text {
   margin-top: 5%;
   width: 70%;
+  position: relative;
 }
 .testimonial .quote .text::after {
-  content: 'wtf is happening here';
-  /* font-size: 8rem; */
+  content: '"';
+  font-size: 8rem;
   position: absolute;
-  bottom: 0;
-  right: 0;
-  /* color: rgba(1,1,1,0.05); */
+  bottom: -7rem;
+  right: 0rem;
+  color: rgba(1,1,1,0.05);
 }
 .testimonial .quote .author {
   font-size: 0.7rem;
@@ -289,7 +290,7 @@ nav .title {
     max-width: 100%;
   }
   .info {
-    margin-top: 15rem;
+    margin-top: 20rem;
     flex-direction: column;
   }
   .info .info-box {
@@ -298,12 +299,19 @@ nav .title {
   }
   .testimonial {
     flex-direction: column;
+    margin-top: 5rem;
   }
   .testimonial .content, .testimonial .image {
     width: 100%;
   }
   .testimonial .image {
     margin-top: 1rem;
+  }
+  .testimonial .quote {
+    margin-top: 1rem;
+  }
+  .testimonial .quote::before {
+    left: -25;
   }
 
 } 
