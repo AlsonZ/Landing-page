@@ -1,33 +1,35 @@
 .body-container {
-  background-color: #F2F2F2;
 }
-.services {
-  margin: 5%;
-  margin-top: 10rem;
-}
-
-.services .header {
-  margin: 1.5rem;
+/* Header */
+.header {
+  padding: 10rem 0;
   display: grid;
-  grid-template-areas: '. .'
-                       'title img '
+  grid-template-areas: 'title img '
                        'content img ';
-  grid-template-columns: 1.5fr 20rem;
-  width: calc(100%-1.5rem);
+  grid-template-columns: 50% 50%;
+  position: relative;
 }
-
-.services .header .title {
+.header::before {
+  content: '';
+  background-color: #F2F2F2;
+  width: calc(2 * var(--side-margin) + 101%);
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: calc(-1.1 * var(--side-margin));
+  z-index: -10;
+}
+.header .title {
   grid-area: title;
   display: inline;
 }
-
-.services .header .title span{
+.header .title span{
   font-size: 0.9rem;
   letter-spacing: 3px;
   color: rgb(65, 65, 65);
   position: relative;
 }
-.services .header .title span::before {
+.header .title span::before {
   content: '';
   display: block;
   position: absolute;
@@ -37,13 +39,33 @@
   border-top: 5px solid var(--highlight-color);
   border-radius: 100vh;
 }
-.services .header .header-content {
+.header .header-content {
   grid-area: content;
-  width: 30rem;
+  width: 100%;
+}
+.header img {
+  grid-area: img;
+  width: 100%;
 }
 
-.services .header img {
-  grid-area: img;
-  width: 20rem;
+/* After Header content */
+/* .container {
+  position: relative;
+} */
+/* .after-header-background {
+  position: absolute;
+  top: 0;
+  left: calc(-1 * var(--side-margin));
+  height: 100vh;
+  width: 100vw;
+  background-color: red;
+} */
 
+@media only screen and (max-width: 950px) {
+  .header {
+    grid-template-columns: 100%;
+    grid-template-areas:'title'
+                        'content'
+                        'img';
+  }
 }
