@@ -168,7 +168,9 @@ nav .title {
 .banner div button{
   padding: 0.7rem;
   font-size: 0.8rem;
-  background-color: var(--highlight-color);
+  background-color: var(--highlight-color);  
+}
+.banner div button a {
   color: var(--button-text);
 }
 .info {
