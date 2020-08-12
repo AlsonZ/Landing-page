@@ -1,6 +1,6 @@
 /* Header */
 .header-container {
-  padding: 10rem 0;
+  padding: 20% 0 5% 0;
   display: grid;
   grid-template-areas: 'title img '
                        'content img ';
@@ -22,8 +22,8 @@
   display: inline;
 }
 .header-container .title span{
-  font-size: 0.9rem;
-  letter-spacing: 3px;
+  font-size: 0.85rem;
+  letter-spacing: 2px;
   color: rgb(65, 65, 65);
   position: relative;
 }
@@ -50,29 +50,46 @@
 
 .info-container {
   display: grid;
-  grid-template-columns: 50% 50%;
-  /* gap: 5%; */
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 20px;
+  margin: 5% 0;
 }
 .info-container .info-box {
   /* margin-right: 5%; */
 }
 .info-container .info-box .title {
-
+  font-size: 1.15rem;
+  margin: 0.2rem 0;
 }
 .info-container .info-box .title-note {
-  font-size: 0.9rem;
-  margin-bottom: 2rem;
+  font-size: 0.8rem;
+}
+.info-container .info-box .title-note b{
+  color: #A1D87F;
 }
 .info-container .info-box .text {
-
+  margin: 1.5rem 0;
+  font-size: 0.85rem;
+  line-height: 1.2rem;
 } 
 .info-container .info-box .link {
-
+  font-size: 0.85rem;
+  cursor: pointer;
+}
+.info-container .info-box .link i {
+  transition: 0.3s ease-in-out;
+}
+.info-container .info-box .link:hover span {
+  border-bottom: 1px solid black;
+}
+.info-container .info-box .link:hover i {
+  padding-left: 0.2rem;
+  color: var(--highlight-color)
 }
 
 
 @media only screen and (max-width: 950px) {
-  .header {
+  .header-container {
     grid-template-columns: 100%;
     grid-template-areas:'title'
                         'content'
