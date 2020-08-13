@@ -41,6 +41,9 @@
   grid-area: content;
   width: 100%;
 }
+.header-container .header-content p {
+  margin-top: 2rem;
+}
 .header-container img {
   grid-area: img;
   width: 100%;
@@ -51,11 +54,11 @@
 .info-container {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-gap: 20px;
-  margin: 5% 0;
+  margin-top: 5%;
 }
 .info-container .info-box {
-  /* margin-right: 5%; */
+  margin-right: 15%;
+  margin-bottom: 10%;
 }
 .info-container .info-box .title {
   font-size: 1.15rem;
@@ -88,11 +91,89 @@
 }
 
 
+/* Consultation */
+
+.consultation-container {
+  margin-bottom: 5%;
+  position: relative;
+}
+.consultation-container img {
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+}
+
+.consultation-container .text-container {
+  padding: 4rem 1rem 4rem 0;
+  width: 40%;
+}
+.consultation-container .text-container::before {
+  content: '';
+  height: 100%;
+  width: calc(2 * var(--side-margin) + 101%);
+  position: absolute;
+  top: 0;
+  left: calc(-1.1 * var(--side-margin));
+  z-index: -10;
+  background-image: url('./images/consultation.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.consultation-container .text-container .title {
+  font-size: 1.15rem;
+  margin: 0.2rem 0;
+}
+.consultation-container .text-container .text {
+  font-size: 0.9rem;
+  margin: 2rem 0;
+}
+.consultation-container .text-container .call-us {
+  margin: 0.2rem 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-size: 0.9rem;
+}
+.consultation-container .text-container .call-us button {
+  background-color: var(--highlight-color);
+  color: var(--button-text)
+}
+.consultation-container .text-container .call-us button i{
+  font-size: 0.8rem;
+  margin-left: 0.3rem;
+}
+.consultation-container .text-container .call-us span {
+  margin: 0 1rem;
+  padding: 0.2rem 0.3rem 0.25rem 0.3rem;
+  background-color: white;
+  border-radius: 5rem;
+}
+.consultation-container .text-container .call-us p {
+  text-align: center;
+}
+.consultation-container .text-container .call-us p b{
+  min-width: 6rem;
+  display: inline-block;
+}
+
 @media only screen and (max-width: 950px) {
   .header-container {
     grid-template-columns: 100%;
     grid-template-areas:'title'
                         'content'
                         'img';
+  }
+  .info-container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .consultation-container .text-container {
+    background-color: rgba(195,202,212,0.7);
+  }
+  .consultation-container .text-container .call-us {
+    flex-direction: column;
+    row-gap: 1rem;
   }
 }
