@@ -13,3 +13,11 @@ window.addEventListener('scroll', (e) => {
     navbar.classList.remove('nav-collapse');
   }
 });
+
+let faqs = document.getElementsByClassName('question');
+
+for(let i = 0; i < faqs.length;i++) {
+  faqs[i].addEventListener('click', () => {
+    faqs[i].classList.toggle('active');
+  })
+}
