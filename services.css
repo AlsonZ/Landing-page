@@ -43,6 +43,7 @@
 }
 .header-container .header-content p {
   margin: 2rem 0;
+  width: 90%;
 }
 .header-container img {
   grid-area: img;
