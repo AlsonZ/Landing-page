@@ -96,7 +96,9 @@ nav .title {
   display: none;
   cursor: pointer;
 }
-
+nav .navbar-right .navbar-items .active, .sidebar .sidebar-items .active {
+  border-bottom: 2px solid var(--highlight-color);
+}
 /* Sidebar */
 
 .sidebar {

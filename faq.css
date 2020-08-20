@@ -1,3 +1,7 @@
+nav .navbar-right .navbar-items .active, .sidebar .sidebar-items .active {
+  border-bottom: 2px solid var(--highlight-color);
+}
+
 /* Header */
 .header-container {
   padding: 20% 0 5% 0;
