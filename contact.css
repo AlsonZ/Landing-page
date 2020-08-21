@@ -16,31 +16,40 @@
 }
 .contact-container .left-side h2 {
   font-size: 1.9rem;
+  padding-bottom: 1rem;
 }
 .contact-container .left-side form {
   font-size: 1rem;
   color: grey;
 }
 .contact-container .left-side form label{
-  margin-top: 1.5rem;
   display: block;
+  transform: translateY(-1.4rem);
+  cursor: text;
+  user-select: none;
+  transition: 0.2s ease-in-out;
 }
 .contact-container .left-side form input{
+  margin-top: 1.5rem;
   display: block;
   width: 90%;
   border: none;
   border-bottom: 1px solid lightgrey;
+  line-height: 1.7rem;
 }
 .contact-container .left-side form input:focus {
   outline: none;
   border-color: var(--highlight-color);
 }
+.contact-container .left-side form input:focus + label, .contact-container .left-side form input:not(:placeholder-shown) + label {
+  transform: translateY(-3rem);
+}
 
 .contact-container .left-side form .submit-button {
-  margin-top: 1.5rem;
+  margin-top: 0.5rem;
   border: none;
   border-radius: 4px;
-  padding: 0.7rem;
+  padding: 0.4rem 0.9rem;
   font-size: 0.9rem;
   background-color: var(--highlight-color);  
   color: var(--button-text);
